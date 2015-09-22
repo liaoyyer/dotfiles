@@ -13,6 +13,7 @@
     - htop
     - nmap
     - node
+    - mosh
     - most
     - python
     - python-pip
@@ -20,6 +21,7 @@
     - python-pycurl
     - python3
     - vim
+    - tmux
     - wget
     - zsh
 
