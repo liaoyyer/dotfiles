@@ -1,51 +1,27 @@
-# Dotfiles by Alex Palcuie
+**dat zijn mijn dotfiles**
 
-Hacking like a geek:
+## Thanks
 
-* the `playbooks` folder contains Ansible that provisions a machine with apps and configs
-* my main machine is a Mac, and I have another Mac at my office, so I keep them in sync
-* there is also a playbook for Ubuntu
-* ZSH shell with ~~oh_my_zsh~~ Prezto and my .zshrc
-* VIM provisioned with Vundle
-* AppleScripts that automate [mundane tasks](http://palcu.blogspot.com/2014/02/automate-everything-even-opening-your.html)
-* the `configs` folder is for other apps like Sublime Text or iTerm2
+This is the repo for my dotfiles and has been highly inspired by
+those awesome dotfiles:
 
-## Setup for new Mac machine
+- https://github.com/holman/dotfiles
+- https://github.com/s10wen/dotfiles
+- https://github.com/skwp/dotfiles
+- https://github.com/LevelbossMike/vim-dotfiles
+- https://github.com/paulirish/dotfiles
+- https://github.com/mathiasbynens/dotfiles
+- https://github.com/ryanb/dotfiles
 
-1. Install XCode tools using `xcode-select --install`
-2. Install [Brew](http://brew.sh/)
 
-  ```bash
-  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-  ```
+## Install
 
-3. Install Ansible using Brew `brew install ansible`
-4. As a convention `~/dotfiles` should be this repo
+	git clone https://github.com/pangratz/dotfiles.git ~/.dotfiles
+	cd ~/.dotfiles
+	script/install
+	script/bootstrap
 
-  ```bash
-  git clone https://github.com/palcu/dotfiles.git ~/dotfiles
-  ```
-5. Install [XQuartz](https://xquartz.macosforge.org/landing/)
-6. Run the Ansible playbook for Mac
+## Set sane OSX defaults
 
-  ```bash
-  ./launch
-  ```
-
-### Problems
-
-I did not manage to change the shell for OSX. Do this once.
-
-```bash
-chsh -s /bin/zsh
-```
-
-## Setup for new Ubuntu machine
-
-```bash
-sudo apt-get update
-sudo apt-get install ansible
-git clone https://github.com/palcu/dotfiles.git ~/dotfiles
-cd ~/dotfiles/playbooks
-./launch
-```
+	cd ~/.dotfiles
+	osx/set-defaults.sh
